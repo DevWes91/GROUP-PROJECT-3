@@ -1,19 +1,31 @@
-const { User, Recipe, Category } = require('server\models\Recipe.js');
-const myRecipes = {
+/*const { Recipe, Category } = require('server\models\Recipe.js');
+const { User } = require('server\models\User.js');
+
+const addUser = {
     Query: {
-        me: async () => {
-            return await User.find({}).populate('recipes').populate({
+        addUser: async () => {
+            return await User.find({}).populate('username').populate({
                 path: 'recipes',
                 populate: 'title'
             });
         },
-        recipes: async () => {
-            return await Recipe.find({}).populate('title');
-        }
+    },
+    Mutation: {
+        login: () => {
+            return true
+        },
+        register: (parent, args, context, info) => ({
+            errors: [
+                {
+                    field: 'username',
+                    message: ''
+                }
+            ]
+        })
     }
 };
 
-module.exports = myRecipes
+module.exports = myRecipes;
 
 const myFavorites = {
     Query: {
