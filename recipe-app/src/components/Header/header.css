@@ -1,0 +1,86 @@
+.header {
+    background-image: url ('GROUP-PROJECT-3\recipe-app\src\assets\images\0.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px; 
+  }
+  
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f39c12; 
+  }
+  
+  .page-name {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .nav-links a {
+      margin-bottom: 10px;
+    }
+  
+    .logo h1 {
+      font-size: 1.5rem;
+    }
+  
+    .page-name {
+      font-size: 1.2rem;
+    }
+  }
+  

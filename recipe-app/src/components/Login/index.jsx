@@ -11,23 +11,22 @@ function Login() {
     const handleChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
-};
-const handleSubmit = (event) => {
+
+    const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!formData.email || !formData.username || !formData.password) {
-        setErro('Please enter all fields');
+        if (!formData.email || !formData.username || !formData.password) {
+        setError('Please enter all fields');
         return;
     }
-};  
-setError('');
 
+    setError('');
+};  
     return (
         <div className='login'>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 {error && <p className='error'>{error}</p>}
-                 
                  <label>Email</label>
                 <input
                     type="email"
