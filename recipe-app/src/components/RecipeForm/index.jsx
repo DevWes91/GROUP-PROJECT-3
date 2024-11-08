@@ -7,7 +7,7 @@ function RecipeForm() {
         ingredients: '',
         instructions: '',
         servings: '',
-        cookedTime: '',
+        cookTime: '',
         
     });
     const handleChange = (event) => {
@@ -58,11 +58,11 @@ function RecipeForm() {
                     onChange={handleChange}
                     required
                 />  
-                <label>Cooked Time</label>
+                <label>Cook Time</label>
                 <input
                     type="number"
-                    name="cookedTime"
-                    value={recipe.cookedTime}
+                    name="cookTime"
+                    value={recipe.cookTime}
                     onChange={handleChange}
                     required
                 />
