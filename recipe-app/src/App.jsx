@@ -1,12 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Header from './components/Header';
 import RecipeForm from './components/RecipeForm';
-import Login from './components/Login'; 
+import Login from './components/Login';
 import FavoritesPage from './components/Favorites';
 import RecipeList from './components/RecipeList';
-import RecipeCard from './components/RecipeCard';
-
 
 function App() {
     return (
@@ -21,14 +19,14 @@ function App() {
                 </nav>
             </Header>
             <main>
-            <Switch>
-                <Route exact path='/' component={RecipeList} />
-                <Route path='/favorites' component={FavoritesPage} />
-                <Route path='/login' component={Login} />
-                <Route path='/add-recipe' component={RecipeForm} />
-            </Switch>
-          </main>
-         </div>  
+                <Routes>
+                    <Route path='/' element={<RecipeList />} />
+                    <Route path='/favorites' element={<FavoritesPage />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/add-recipe' element={<RecipeForm />} />
+                </Routes>
+            </main>
+          </div>  
         </Router>
     );
 }

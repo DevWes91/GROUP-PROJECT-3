@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import RecipeCard from '/components/RecipeCard';
+import RecipeCard from "../RecipeCard";
 
 function Favorites() {
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
 
   useEffect(() => {
     const fetchFavorites = async () => {
-      const data = await client.request(// fetch favorite recipes);
+      const data = await client.request
       const filteredRecipes = data.recipes.filter((recipe) => {
         return recipe.isFavorite;
       });
