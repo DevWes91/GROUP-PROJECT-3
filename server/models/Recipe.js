@@ -21,9 +21,6 @@ const recipeSchema = new Schema({
       required: true,
       enum: ['VEGETARIAN', 'MEAT_BASED', 'SEAFOOD', 'DESSERT']
     },
-    prepTime: {
-      type: Number
-    },
     cookTime: {
       type: Number
     },
@@ -37,9 +34,6 @@ const recipeSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'User',
       required: true
-    },
-    shareableLink: {
-      type: String
     },
     createdAt: {
       type: Date,

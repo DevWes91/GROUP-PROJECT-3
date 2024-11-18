@@ -5,23 +5,17 @@ import RecipeForm from './components/RecipeForm';
 import Login from './components/Login';
 import FavoritesPage from './components/Favorites';
 import RecipeList from './components/RecipeList';
+import Home from './components/Home';
 
 function App() {
     return (
         <Router>
           <div className='App'>
-            <Header>
-                <nav>
-                    <Link to='/'>Home</Link>
-                    <Link to='/favorites'>Favorites</Link>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/add-recipe'>Add Recipe</Link>
-                </nav>
-            </Header>
-            <main>
+            <Header/>
+             <main>
                 <Routes>
-                    <Route path='/' element={<RecipeList />} />
-                    <Route path='/favorites' element={<FavoritesPage />} />
+                    <Route path='/' element={<Home />} />
+                    <Route path='./components/Favorites' element={<FavoritesPage />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/add-recipe' element={<RecipeForm />} />
                 </Routes>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RecipeCard from "../RecipeCard";
+import RecipeCard from "../RecipeCard/index.jsx";
 
 function Favorites() {
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
