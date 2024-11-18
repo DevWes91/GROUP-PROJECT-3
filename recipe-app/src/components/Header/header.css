@@ -1,15 +1,5 @@
-.header {
-    background-image: url ('GROUP-PROJECT-3\recipe-app\src\assets\images\0.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 300px; 
-  }
-  
+
+/*git  
   .navbar {
     width: 100%;
     display: flex;

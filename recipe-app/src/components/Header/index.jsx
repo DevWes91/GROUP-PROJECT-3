@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './header.css';
-;
+
+
 function Header() {
     const location = useLocation();
     
     const getPageName = () => {
         switch (location.pathname) {
-            case '/':
-                return 'Home';
+          
             case '/favorites':
                 return 'Favorites';
             case '/login':
@@ -23,7 +22,7 @@ function Header() {
             <header className='header'>
                 <nav className='navbar'>
                     <Link to='/' className='logo'>
-                        <h1>Recipe Manager</h1>
+            
                     </Link>
                     <ul className='nav-links'>
                         <li>

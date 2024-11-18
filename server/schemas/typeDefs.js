@@ -154,7 +154,6 @@ const addRecipe = {
           ingredients: '',
           instructions: '',
           Category: '',
-          prepTime: '',
           cookTime: '',
           servings: '',
           image: ''
