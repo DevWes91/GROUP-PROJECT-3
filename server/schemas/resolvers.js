@@ -1,4 +1,4 @@
-/*const { Recipe, Category } = require('server\models\Recipe.js');
+const { Recipe, Category } = require('server\models\Recipe.js');
 const { User } = require('server\models\User.js');
 
 const addUser = {
@@ -80,9 +80,13 @@ const allRecipies = {
     }
 };
 
+
 module.exports = allRecipies;
 
 
 const mongooseModels = require('../models');
 
 module.exports = mongooseModels; */
+
+module.exports = allRecipes;
+
