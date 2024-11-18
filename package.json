@@ -2,5 +2,9 @@
   "dependencies": {
     "express": "^4.21.1",
     "graphql": "^16.9.0"
-  }
+  },
+  "scripts": {
+  "start": "node server/server.js",
+  "dev": "concurrently \"cd recipe-app && npm run dev\" \"cd server && npm run watch\""
+}
 }
