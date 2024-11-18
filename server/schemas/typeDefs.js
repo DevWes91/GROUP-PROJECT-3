@@ -1,6 +1,6 @@
-const { gql } = require('apollo-server-express');
+//const { gql } = require('apollo-server-express');
 
-const typeDefs = gql`
+export const typeDefs = gql`
   type User {
     _id: ID!
     username: String!
@@ -58,7 +58,7 @@ const typeDefs = gql`
 `;
 
 
-
+/*
 //Allows user to log in as well as register for new account
 const addUser = {
   Query: {
@@ -107,7 +107,7 @@ const addUser = {
 console.log(addUser);
 
 
-
+/*
 //Allows user to add new recipe
 const addRecipe = {
   Query: {
@@ -302,10 +302,4 @@ const favoriteRecipes = {
 };
 console.log(favoriteRecipes);
 
-
-
-const server = new ApolloServer({ typeDefs, resolvers, context: ({req, res}) => ({req, res}) });
-
-server.listen().then(({ url }) => console.log(`Server now listening at ${url}`));
-
-module.exports = typeDefs;
+*/
