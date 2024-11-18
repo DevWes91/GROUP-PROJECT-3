@@ -15,7 +15,7 @@ function App() {
              <main>
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='./components/Favorites' element={<FavoritesPage />} />
+                    <Route path='/components/Favorites' element={<FavoritesPage />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/add-recipe' element={<RecipeForm />} />
                 </Routes>

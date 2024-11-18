@@ -1,7 +1,7 @@
 import React from "react";
 
 const Home = () => (
-    <section clasName="home">
+    <section className="home">
         <h1>Welcome to Recipe Manager</h1>
 <p>
 Discover, save, and share your favorite recipes all in one place. Recipe Hub is your personal recipe manager, where you can:
