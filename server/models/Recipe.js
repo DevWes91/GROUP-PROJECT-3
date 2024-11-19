@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 const recipeSchema = new Schema({
     title: {
       type: String,
@@ -46,4 +48,8 @@ const recipeSchema = new Schema({
       default: Date.now
     }
   });
-  
+
+
+const Recipe = mongoose.model('Recipe', recipeSchema);
+
+module.exports = Recipe;
