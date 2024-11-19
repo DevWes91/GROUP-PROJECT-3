@@ -1,5 +1,11 @@
-import { typeDefs } from "./schemas/typeDefs";
+import { mongooseModels } from './schemas';
+import { typeDefs } from './schemas';
+import { resolvers } from './schemas';
+import { mutations } from './schemas';
 
+const { ApolloServer, gql } = require('apollo-server');
+const connectDB = require('./MongoDB');
+const models = require('./models');
 const auth = require('./utils', './moddleware');
 
 if (auth == false) {
@@ -8,11 +14,13 @@ if (auth == false) {
     console.log('Task completed');
 };
 
-const server = new Server({
+const server = new ApolloServer({
     typeDefs,
-    mutations
+    resolvers,
+    mutations,
+    mongooseModels
 });
 
-server.listen().then(({ PORT }) => {
-    console.log(`Server ready at ${PORT}`)
+server.listen().then(({ url }) => {
+    console.log(`Server ready at ${url}`)
 })
