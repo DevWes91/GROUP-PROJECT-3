@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "dev": "vite", 
     "build": "vite build",
-    "preview": "vite preview",
-    "start": "node server/server.js"
+    "preview": "vite preview", 
+    "start": "node server/server.js" 
   },
   "dependencies": {
     "@apollo/client": "^3.11.9",
