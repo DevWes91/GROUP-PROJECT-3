@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function RecipeForm() {
     const [recipe, setRecipe] = useState({
@@ -7,50 +7,74 @@ function RecipeForm() {
         ingredients: '',
         instructions: '',
         servings: '',
-        cookTime: '',
-        
+        cookTime: '' 
     });
-    const handleChange = (event) => {
-        setRecipe({ ...recipe, [event.target.name]: event.target.value });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        console.log(`Updating ${name}:`, value);
+        setRecipe((prevRecipe) => ({
+            ...prevRecipe,
+            [name]: value,
+        }));
     };
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('New Recipe:', recipe);
+    // Handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submission triggered');
+        console.log('Submitted Recipe:', recipe);
+      
     };
 
     return (
-        <div ClassName='recipe-form'>
-            <h2>Add New Recipe</h2>
             <form onSubmit={handleSubmit}>
-                <label>Title</label>
-                <input
-                    type="title"
-                    value={recipe.category}
+            <label>
+                    Title:
+            <input
+                    type="text"
+                    name="title"
+                    value={recipe.title}
                     onChange={handleChange}
                     required
                 />
-                <label>Category</label>
-               <select name='category' onChange={handleChange}>
+            </label>
+
+            <label>
+                Category:
+               <select
+                     name='category'
+                     value={recipe.category}
+                     onChange={handleChange}
+                     required
+                 >
                     <option value="VEGETARIAN">Vegetarian</option>
                     <option value="MEAT_BASED">Meat-Based</option>
                     <option value="SEAFOOD">Seafood</option>
                     <option value="DESSERT">Dessert</option>
                 </select>
-                <label>Ingredients</label>
+            </label>
+
+                <label>
+                    Ingredients:
                 <textarea
-                    type="ingredients"
-                    value={recipe.ingredients}
-                    onChange={handleChange}
-                    required
-                />
-                <label>Instructions</label>
+                 name="ingredients"
+                value={recipe.ingredients}
+                onChange={handleChange}
+                required
+             />
+            </label>
+             
+                <label>
+                    Instructions:
                 <textarea
                     name="instructions"
                     value={recipe.instructions}
                     onChange={handleChange}
                     required
                 />
-                <label>Servings</label>
+             </label>   
+
+                <label>
+                    Servings:
                 <input
                     type="number"
                     name="servings"
@@ -58,18 +82,23 @@ function RecipeForm() {
                     onChange={handleChange}
                     required
                 />  
-                <label>Cook Time</label>
+             </label>
+
+                <label>
+                    Cook Time:
                 <input
-                    type="number"
+                    type="text"
                     name="cookTime"
                     value={recipe.cookTime}
                     onChange={handleChange}
                     required
                 />
-                <button type="submit">Add Recipe</button>
+            </label>
+            <button type="submit">Add Recipe</button>
             </form>
-        </div>
+        
     );
 }
 
-export default RecipeForm      
+export default RecipeForm;     
+

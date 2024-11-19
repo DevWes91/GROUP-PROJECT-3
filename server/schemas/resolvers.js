@@ -1,4 +1,8 @@
-import db from ('../MongoDB');
+
+
+const { Recipe, Category } = require('server\models\Recipe.js');
+const { User } = require('server\models\User.js');
+
 
 const resolvers = {
     Query: {
@@ -19,5 +23,3 @@ const resolvers = {
        }
     }
 }
-
-module.exports = resolvers;
