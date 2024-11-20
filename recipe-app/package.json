@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite", 
+    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview", 
-    "start": "node server/server.js" 
+    "preview": "vite preview",
+    "start": "serve -s dist"
   },
   "dependencies": {
     "@apollo/client": "^3.11.9",
@@ -15,7 +15,8 @@
     "jwt-decode": "^4.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "serve": "^14.2.4" 
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
