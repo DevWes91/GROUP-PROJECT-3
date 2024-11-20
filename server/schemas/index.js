@@ -1,4 +1,4 @@
-import { mongooseModels } from '../models';
+import { mongooseModels } from '../models/index.js';
 import { typeDefs } from './typeDefs.js';
 import { resolvers } from './resolvers.js';
 
