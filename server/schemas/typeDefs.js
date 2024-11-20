@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+import { gql } from 'apollo-server-express';
 
 export const typeDefs = gql`
   type User {
@@ -56,3 +56,4 @@ export const typeDefs = gql`
     toggleFavorite(recipeId: ID!): User
   }
 `;
+
