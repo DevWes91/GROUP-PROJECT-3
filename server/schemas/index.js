@@ -1,6 +1,5 @@
-const mongooseModels = require('../models');
-const typeDefs = require('./typeDefs');
-const resolvers = require('./resolvers');
-const mutations = require('./mutations');
+import { mongooseModels } from '../models';
+import { typeDefs } from './typeDefs.js';
+import { resolvers } from './resolvers.js';
 
-module.exports = { mongooseModels, typeDefs, resolvers, mutations };
+export { mongooseModels, typeDefs, resolvers };
